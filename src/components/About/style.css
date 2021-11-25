@@ -1,4 +1,67 @@
 .aboutContainer {
     width: 100%;
-    min-height: 100vw;
+    background: var(--whiteYellow-background);
+}
+
+.aboutMeInfoContainer {
+    display: grid;
+    padding: 0 8%;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+}
+
+.robPic {
+    width: clamp(260px, 20vw, 20vw);
+    height: clamp(260px, 20vw, 20vw);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.aboutMeText {
+    align-self: center;
+    font-family: var(--font-montserrat);
+    line-height: 30px;
+    word-spacing: 7px;
+    color: black;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 22px);
+}
+
+@media only screen and (max-width: 1500px) {
+    .robPic {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .aboutMeInfoContainer {
+        padding: 0 5%;
+    }
+
+    .aboutMeInfoContainer {
+        grid-template-columns: 45% 55%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .aboutMeInfoContainer {
+        grid-template-columns: 96%;
+        gap: 14px;
+    }
+
+    .robPic {
+        justify-self: center;
+    }
+
+    .aboutMeText {
+        justify-self: center;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .robPic {
+        height: 240px;
+        width: 240px;
+    }
 }

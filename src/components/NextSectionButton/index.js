@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css"
 
 const NextSectionButton = ({text}) => {
     return (
-        <div>{text}</div>
+        <div className="nextSectionButton">{text}</div>
     )
 }
 

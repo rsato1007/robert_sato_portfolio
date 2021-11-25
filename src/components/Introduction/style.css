@@ -3,3 +3,39 @@
     width: 100%;
     height: 100vh;
 }
+
+.introductionInformation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.introductionText {
+    font-size: clamp(24px, 3vw, 3vw);
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    color: var(--whiteYellow-background);
+    margin-bottom: clamp(15px, 2.5vw, 2.5vw);
+}
+
+.introductionName {
+    color: var(--blue-background);
+}
+
+@media only screen and (max-width: 600px) {
+    .introductionInformation {
+        width: 85vw;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .introductionInformation {
+        width: 90vw;
+    }
+
+    .introductionText {
+        font-size: 20px;
+    }
+}

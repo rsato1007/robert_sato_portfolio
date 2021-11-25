@@ -3,6 +3,9 @@
 :root {
     /* Global Colors */
     --green-background: #5CDB95;
+    --darker-green-background: #54ca89;
+    --whiteYellow-background: #EDF5E1;
+    --blue-background: #05386B;
 
     /* Global Fonts */
     --font-lato: 'Lato', sans-serif;

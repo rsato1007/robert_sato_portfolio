@@ -1,0 +1,23 @@
+.logoContainer {
+    /* overflow: scroll; */
+    /* width: 100%; */
+    margin-top: clamp(55px, 6vw, 70px);
+    margin-bottom: clamp(55px, 6vw, 70px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.html-image {
+    height: clamp(75px, 10vw, 10vw);
+    width: clamp(75px, 10vw, 10vw);
+}
+
+.css-image {
+    height: clamp(75px, 10vw, 10vw);
+    width: clamp(55px, 7vw, 7vw);
+}
+
+.js-image {
+    height: clamp(75px, 10vw, 10vw);
+    width: clamp(55px, 7vw, 7vw);
+}

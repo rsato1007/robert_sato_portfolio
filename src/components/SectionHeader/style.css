@@ -1,0 +1,14 @@
+.sectionHeader {
+    margin-top: 30px;
+    text-align: center;
+    font-family: var(--font-playfair);
+    font-weight: bold;
+    color: var(--blue-background);
+    font-size: clamp(20px, 2.5vw, 48px);
+}
+
+.sectionHeaderLine {
+    width: clamp(35px, 4.5vw, 70px);
+    border: 2px solid var(--blue-background);
+    margin-top: 0px;
+}

@@ -24,9 +24,42 @@
     color: var(--blue-background);
 }
 
+.learnMoreButton {
+    border: 4px solid black;
+    border-color: var(--blue-background);
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    font-size: clamp(24px, 2.5vw, 30px);
+    font-family: var(--font-lato);
+    background: var(--green-background);
+    font-weight: bold;
+    color: var(--blue-background);
+    text-align: center;
+}
+
+.learnMoreButton:hover {
+    background: var(--darker-green-background);
+}
+
+@media only screen and (min-width: 1200px) {
+    .learnMoreButton {
+        width: 216px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .introductionInformation {
         width: 85vw;
+    }
+
+    .learnMoreButton {
+        width: 150px;
+        font-size: 22px;
+        height: 40px;
+        line-height: 40px;
+        border-width: 3px;
     }
 }
 
@@ -37,5 +70,12 @@
 
     .introductionText {
         font-size: 20px;
+    }
+
+    .learnMoreButton {
+        width: 130px;
+        font-size: 20px;
+        height: 30px;
+        line-height: 30px;
     }
 }

@@ -1,11 +1,12 @@
 import React from "react";
+import "./style.css"
 import SectionHeader from "../SectionHeader";
 import TechLogos from "./TechLogos";
 import NextSectionButton from "../NextSectionButton";
 
 const About = () => {
     return (
-        <div>
+        <div className="aboutContainer">
             <SectionHeader text="About"/>
             <TechLogos />
             <div>

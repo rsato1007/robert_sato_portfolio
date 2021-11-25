@@ -3,7 +3,9 @@ import "./style.css"
 
 const NextSectionButton = ({text}) => {
     return (
-        <div className="nextSectionButton">{text}</div>
+        <div className="nextSectionButtonContainer">
+            <div className="nextSectionButton">{text}</div>
+        </div>
     )
 }
 

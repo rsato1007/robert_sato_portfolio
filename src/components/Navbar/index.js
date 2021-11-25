@@ -3,7 +3,10 @@ import React from "react"
 const Navbar = () => {
     return (
         <div>
-            This is the navbar bud.
+            <a>Home</a>
+            <a>About</a>
+            <a>Projects</a>
+            <a>Contact</a>
         </div>
     )
 }

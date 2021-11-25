@@ -1,10 +1,11 @@
 import React from "react";
 import NextSectionButton from "../NextSectionButton";
+import "./style.css"
 
 const Introduction = () => {
     return (
-        <div>
-            <div>This is the introduction section!</div>
+        <div className="introductionContainer">
+            <div>Hello, I am <span>Robert Sato.</span> A full-stack developer.</div>
             <NextSectionButton text="Learn more"/>
         </div>
     )

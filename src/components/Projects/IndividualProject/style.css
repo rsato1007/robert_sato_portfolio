@@ -1,0 +1,19 @@
+.projectCardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 33%;
+}
+
+.projectCardTitle {
+    font-family: var(--font-playfair);
+    text-align: center;
+    color: var(--blue-background);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.projectCardImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css"
 
-const NextSectionButton = ({text}) => {
+const NextSectionButton = ({text, idText}) => {
     return (
         <div className="nextSectionButtonContainer">
-            <div className="nextSectionButton">{text}</div>
+            <a href={idText}><div className="nextSectionButton">{text}</div></a>
         </div>
     )
 }

@@ -11,4 +11,5 @@
     width: clamp(35px, 4.5vw, 70px);
     border: 2px solid var(--blue-background);
     margin-top: 0px;
+    background: var(--blue-background);
 }

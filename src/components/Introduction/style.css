@@ -43,6 +43,10 @@
     background: var(--darker-green-background);
 }
 
+a {
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 1200px) {
     .learnMoreButton {
         width: 216px;

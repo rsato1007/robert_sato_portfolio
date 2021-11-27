@@ -4,7 +4,10 @@
 
 .projectListContainer {
     display: flex;
-    margin: 20px 7.5% 30px 7.5%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    margin-top: clamp(50px, 6vw, 70px);
+    margin-bottom: clamp(80px, 8.5vw, 120px);
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;

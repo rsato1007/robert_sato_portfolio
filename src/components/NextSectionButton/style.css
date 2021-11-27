@@ -1,5 +1,5 @@
 .nextSectionButtonContainer {
-    padding-bottom: clamp(40px, 5vw, 60px);
+    padding-bottom: clamp(60px, 7.5vw, 90px);
 }
 
 .nextSectionButton {

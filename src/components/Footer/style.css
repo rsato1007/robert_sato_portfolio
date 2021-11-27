@@ -1,0 +1,15 @@
+.footerContainer {
+    background: var(--blue-background);
+    width: 100%;
+    height: 7vh;
+}
+
+.footerText {
+    margin: 0;
+    text-align: center;
+    line-height: 7vh;
+    color: var(--green-background);
+    font-weight: bold;
+    font-family: var(--font-lato);
+    font-size: clamp(14px, 2vw, 20px);
+}

@@ -25,6 +25,7 @@
 
 .logoLink {
     font-size: 20px;
+    font-family: var(--font-lato);
 }
 
 @media only screen and (max-width: 1000px) {

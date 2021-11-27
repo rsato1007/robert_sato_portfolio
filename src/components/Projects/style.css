@@ -1,4 +1,14 @@
 .projectListContainer {
     display: flex;
-    margin: 20px 7.5% 0 7.5%;
+    margin: 20px 7.5% 30px 7.5%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 400px) {
+    .projectListContainer {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
 }

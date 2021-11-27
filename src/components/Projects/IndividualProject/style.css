@@ -1,7 +1,7 @@
 .projectCardContainer {
     display: grid;
     grid-template-columns: 1fr;
-    width: 33%;
+    width: clamp(200px, 33%, 450px);
 }
 
 .projectCardTitle {
@@ -16,4 +16,61 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+    .projectCardTitle {
+        font-size: clamp(18px, 2vw, 2vw)
+    }
+
+    .projectCardImage {
+        height: clamp(175px, 17vw, 17vw);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .projectCardContainer {
+        width: 275px;
+    }
+    .projectCardImage {
+        height: clamp(200px, 17vw, 17vw);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .projectCardContainer {
+        width: 250px;
+    }
+    .projectCardImage {
+        height: clamp(200px, 17vw, 17vw);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projectCardContainer {
+        width: 300px;
+    }
+    .projectCardImage {
+        height: 190px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .projectCardContainer {
+        width: 280px;
+    }
+
+    .projectCardImage {
+        height: 180px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .projectCardContainer {
+        width: 250px;
+    }
+
+    .projectCardImage {
+        height: 165px;
+    }
 }

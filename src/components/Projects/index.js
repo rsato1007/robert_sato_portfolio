@@ -12,7 +12,7 @@ const projectList = [
 
 const Projects = () => {
     return (
-        <div>
+        <div className="projectContainer">
             <SectionHeader text="Projects" idText="projects" />
             <div className="projectListContainer">
                 {

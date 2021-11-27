@@ -1,0 +1,65 @@
+.contactContainer {
+    background: var(--whiteYellow-background);
+}
+
+.contactText {
+    margin-top: 20px;
+    text-align: center;
+    font-family: var(--font-montserrat);
+    color: var(--blue-background);
+    font-size: clamp(16px, 2vw, 22px);
+}
+
+.logoContainerContact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (min-width: 1200px) {
+    .contactText {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .contactText {
+        font-size: 22px;
+    }
+
+    .logoContainerContact {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .logoContainerContact {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 27%;
+        gap: 40px 0px;
+        padding-top: 75px;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .contactText {
+        font-size: 16px;
+    }
+    
+    .logoContainerContact {
+        margin-left: 15%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .logoContainerContact {
+        padding-top: 50px;
+    }
+    .contactText {
+        font-size: 14px;
+    }
+}

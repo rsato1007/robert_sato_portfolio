@@ -1,10 +1,13 @@
 .logoContainer {
-    /* overflow: scroll; */
-    /* width: 100%; */
     margin-top: clamp(55px, 6vw, 70px);
     margin-bottom: clamp(55px, 6vw, 70px);
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    gap: 30px 60px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .html-image {
@@ -22,7 +25,105 @@
     width: clamp(55px, 7vw, 98px);
 }
 
+.python-image {
+    height: clamp(70px, 10vw, 130px);
+    width: clamp(50px, 7vw, 110px);
+}
+
 .react-image {
     height: clamp(75px, 10vw, 140px);
     width: clamp(75px, 10vw, 140px);
+}
+
+.django-image {
+    height: clamp(65px, 9vw, 125px);
+    width: clamp(100px, 13vw, 225px);
+}
+
+.express-image {
+    height: clamp(65px, 9vw, 125px);
+    width: clamp(100px, 13vw, 225px);
+}
+
+.mongoDB-image {
+    height: clamp(75px, 10vw, 140px);
+    width: clamp(115px, 15vw, 250px);
+}
+
+.postgresql-image {
+    height: clamp(70px, 10vw, 130px);
+    width: clamp(55px, 8vw, 120px);
+}
+
+.aws-image {
+    height: clamp(55px, 8vw, 105px);
+    width: clamp(90px, 12vw, 195px);
+}
+
+.heroku-image {
+    height: clamp(55px, 8vw, 100px);
+    width: clamp(40px, 5.5vw, 75px);
+}
+
+@media only screen and (max-width: 750px) {
+    .logoContainer {
+        gap: 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .html-image {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .css-image {
+        height: 60px;
+        width: 44px;
+    }
+    
+    .js-image {
+        height: 60px;
+        width: 44px;
+    }
+    
+    .python-image {
+        height: 57px;
+        width: 46px;
+    }
+    
+    .react-image {
+        height: 60px;
+        width: 50px;
+    }
+
+    .django-image {
+        height: 60px;
+        width: 95px;
+    }
+
+    .express-image {
+        height: 60px;
+        width: 95px;
+    }
+
+    .mongoDB-image {
+        height: 60px;
+        width: 100px;
+    }
+
+    .postgresql-image {
+        height: 57px;
+        width: 50px;
+    }
+
+    .aws-image {
+        height: 52px;
+        width: 90px;
+    }
+
+    .heroku-image {
+        height: 57px;
+        width: 43px;
+    }
 }

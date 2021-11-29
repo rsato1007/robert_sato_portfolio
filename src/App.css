@@ -17,7 +17,7 @@
 /* Global Styles */
 
 .shown {
-    opacity: 100%;
+    opacity: 1;
     animation-name: appear;
     animation-duration: 1s;
 }
@@ -27,6 +27,6 @@
 }
 
 @keyframes appear {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

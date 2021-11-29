@@ -1,0 +1,29 @@
+.navbarContainerDesktop {
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    background: var(--blue-background);
+    color: var(--whiteYellow-background);
+    font-size: clamp(18px, 2vw, 24px);
+    font-family: var(--font-lato);
+    position: sticky;
+    top: 0px;
+}
+
+.navbarLinkContainer {
+    margin-left: 75px;
+}
+
+.navbarLink {
+    margin-left: 25px;
+}
+
+.navbarLink:hover {
+    color: var(--green-background);
+}
+
+@media only screen and (max-width: 1000px) {
+    .navbarLinkContainer {
+        margin-left: 5vw;
+    }
+}

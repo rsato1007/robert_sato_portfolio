@@ -13,3 +13,20 @@
     --font-montserrat: 'Montserrat', sans-serif;
     --font-playfair: 'Playfair Display', serif;
 }
+
+/* Global Styles */
+
+.shown {
+    opacity: 100%;
+    animation-name: appear;
+    animation-duration: 1s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes appear {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}

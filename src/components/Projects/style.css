@@ -2,6 +2,10 @@
     background: var(--lighterWhite-background);
 }
 
+/* .projectContainerOpacity {
+    opacity: 0;
+} */
+
 .projectListContainer {
     display: flex;
     margin-left: 7.5%;

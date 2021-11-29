@@ -40,7 +40,6 @@ const App = () => {
 
   const scrollTo = (position, topPercent, e) => {
     e.preventDefault();
-    console.log("Testing")
     window.scroll({
       top: (position * topPercent),
       left: 0,
@@ -60,6 +59,8 @@ const App = () => {
       setAboutPosition(calcHeight(document.querySelector(".aboutContainer")));
       setContactPosition(calcHeight(document.querySelector(".contactContainer")));
     }
+
+    console.log("Broswer Width: ", browserWidth);
 
     window.onscroll = () => {
       setVerticalPosition(window.pageYOffset);

@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css"
 
-const NextSectionButton = ({text, idText}) => {
+const NextSectionButton = ({ text, position, top, scrollTo }) => {
     return (
-        <div className="nextSectionButtonContainer">
-            <a href={idText}><div className="nextSectionButton">{text}</div></a>
+        <div onClick={(e) => {scrollTo(position, top, e)}} className="nextSectionButtonContainer">
+            <div className="nextSectionButton">{text}</div>
         </div>
     )
 }

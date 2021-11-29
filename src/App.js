@@ -38,11 +38,29 @@ const App = () => {
     elem.classList.remove("hidden");
   }
 
+  const scrollTo = (position, topPercent, e) => {
+    e.preventDefault();
+    console.log("Testing")
+    window.scroll({
+      top: (position * topPercent),
+      left: 0,
+      behavior: "smooth"
+    });
+  }
+
   const [verticalPosition, setVerticalPosition] = useState(window.pageYOffset);
+  const [browserWidth, setBrowserWidth] = useState(window.innerWidth);
   const [aboutPosition, setAboutPosition] = useState(0);
-  const [contactPosition, setContactPosition] = useState(0)
+  const [projectPosition, setProjectPosition] = useState(0);
+  const [contactPosition, setContactPosition] = useState(0);
 
   useEffect(() => {
+    window.onresize = () => {
+      setBrowserWidth(window.innerWidth);
+      setAboutPosition(calcHeight(document.querySelector(".aboutContainer")));
+      setContactPosition(calcHeight(document.querySelector(".contactContainer")));
+    }
+
     window.onscroll = () => {
       setVerticalPosition(window.pageYOffset);
     }
@@ -53,21 +71,34 @@ const App = () => {
     if (aboutPosition * 0.90 < verticalPosition) {
       showElement(document.querySelector(".aboutSecondHalf"));
     }
-    if (contactPosition * 0.70 < verticalPosition) {
+    if (contactPosition * 0.85 < verticalPosition) {
       showElement(document.querySelector(".contactContainer"));
     }
   }, [verticalPosition, aboutPosition, contactPosition]);
-// https://www.geeksforgeeks.org/how-to-detect-when-user-scrolls-to-the-bottom-of-a-div/
 
   return (
-    <div className="Testing">
-      <Introduction />
-      <Navbar />
-      <About 
-        setAboutPosition = {setAboutPosition} 
-        calcHeight = {calcHeight} 
+    <div className="app-container">
+      <Introduction
+        aboutPosition = {aboutPosition}
+        scrollTo = {scrollTo}
       />
-      <Projects 
+      <Navbar 
+        aboutPosition = {aboutPosition}
+        projectPosition = {projectPosition}
+        contactPosition = {contactPosition}
+        scrollTo = {scrollTo}
+      />
+      <About
+        projectPosition = {projectPosition}
+        setAboutPosition = {setAboutPosition} 
+        calcHeight = {calcHeight}
+        scrollTo = {scrollTo}
+      />
+      <Projects
+        contactPosition = {contactPosition}
+        setProjectPosition = {setProjectPosition}
+        calcHeight = {calcHeight}
+        scrollTo = {scrollTo}
       />
       <Contact
           setContactPosition = {setContactPosition}

@@ -4,7 +4,7 @@ import SectionHeader from "../SectionHeader";
 import TechLogos from "./TechLogos";
 import NextSectionButton from "../NextSectionButton";
 
-const About = ({setAboutPosition, calcHeight}) => {
+const About = ({ projectPosition, setAboutPosition, calcHeight, scrollTo }) => {
     useEffect(() => {
         setAboutPosition(calcHeight(document.querySelector(".aboutContainer")));
       });
@@ -22,7 +22,12 @@ const About = ({setAboutPosition, calcHeight}) => {
                         Born and raised in Colorado, I started my journey in finance, but after a few years, I was left unsatisfied. I enjoyed it, but I wanted something that would push me and allow to create things I can tangibly see. This is where coding comes in. I joined General Assembly’s software engineer program in May 2021 to start a new path and graudated in November 2021. A path where I can make things that empower others to achieve their purpose. Now I want bring my skills to company that empowers it’s users.
                     </p>
                 </div>
-                <NextSectionButton text="Projects" idText="#projects" />
+                <NextSectionButton
+                    text="Projects"
+                    position={projectPosition}
+                    top={0.974}
+                    scrollTo = {scrollTo}
+                />
             </div>
         </div>
     )

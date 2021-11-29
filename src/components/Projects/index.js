@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import SectionHeader from "../SectionHeader";
 import IndividualProject from "./IndividualProject";
 import NextSectionButton from "../NextSectionButton";
@@ -12,7 +12,11 @@ const projectList = [
     {title: "Next Route", tech: "Django, HTML, CSS, Postgresql, Heroku, AWS, JavaScript", description: "A web app for rock climbers to find their next route, to share new routes, and to review current routes.", Github: "https://github.com/rsato1007/next_route", demo: "https://climbernextroute.herokuapp.com/", image: require("../../images/project_image/nextRoute.png")}
 ]
 
-const Projects = () => {
+const Projects = ({ contactPosition, setProjectPosition, calcHeight, scrollTo }) => {
+    useEffect(() => {
+        setProjectPosition(calcHeight(document.querySelector(".projectContainer")));
+      });
+
     return (
         <div className="projectContainer">
             <SectionHeader text="Projects" idText="projects" />
@@ -22,7 +26,7 @@ const Projects = () => {
                     <IndividualProject project={project} key={i}/>)
                 }
             </div>
-            <NextSectionButton text="Contact" idText="#contact"/>
+            <NextSectionButton text="Contact" position={contactPosition} top={1} scrollTo={scrollTo} />
         </div>
     )
 }

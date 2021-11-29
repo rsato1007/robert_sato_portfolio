@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css"
 
 const Introduction = () => {
+      
     return (
         <div className="introductionContainer" id="introduction">
             <div className="introductionInformation">

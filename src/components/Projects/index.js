@@ -19,7 +19,7 @@ const Projects = () => {
             <div className="projectListContainer">
                 {
                     projectList.map((project, i) =>
-                    <IndividualProject project={project} />)
+                    <IndividualProject project={project} key={i}/>)
                 }
             </div>
             <NextSectionButton text="Contact" idText="#contact"/>

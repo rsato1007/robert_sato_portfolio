@@ -60,8 +60,6 @@ const App = () => {
       setContactPosition(calcHeight(document.querySelector(".contactContainer")));
     }
 
-    console.log("Broswer Width: ", browserWidth);
-
     window.onscroll = () => {
       setVerticalPosition(window.pageYOffset);
     }
@@ -83,7 +81,8 @@ const App = () => {
         aboutPosition = {aboutPosition}
         scrollTo = {scrollTo}
       />
-      <Navbar 
+      <Navbar
+        browserWidth = {browserWidth}
         aboutPosition = {aboutPosition}
         projectPosition = {projectPosition}
         contactPosition = {contactPosition}

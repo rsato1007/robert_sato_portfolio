@@ -18,6 +18,110 @@
     object-fit: cover;
 }
 
+.projectCardBackground {
+    width: 100%;
+    height: 250px;
+    background: var(--green-background);
+}
+
+.projectCardLearnMoreButton {
+    text-align: center;
+    border: 4px solid var(--blue-background);
+    position: relative;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    font-family: var(--font-lato);
+    color: var(--blue-background);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.projectCardLearnMoreButton:hover {
+    background: var(--darker-green-background);
+}
+
+.infoCardContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 100;
+    animation-name: backgroundShow;
+    animation-duration: 0.20s;
+}
+
+.infoCard {
+    width: 50%;
+    position: relative;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: showInfoCard;
+    animation-duration: 0.40s;
+}
+
+.infoCardImage {
+    width: 100%;
+}
+
+.infoCardTextContainer {
+    width: 100%;
+    background: var(--lighterWhite-background);
+}
+
+.showCardAnimation {
+    animation-name: showInfoCard;
+    animation-duration: 0.41s;
+}
+
+.hideCardAnimation {
+    animation-name: hideInfoCard;
+    animation-duration: 0.41s;
+}
+
+.hideAnimation {
+    animation-name: hideCard;
+    animation-duration: 0.20s;
+    animation-delay: 0.20s;
+}
+
+@keyframes showInfoCard {
+    from {
+        top: 0;
+    }
+}
+
+@keyframes hideInfoCard {
+    to {
+        opacity: 1;
+        top: 140vh;
+    }
+}
+
+@keyframes backgroundShow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+}
+
+@keyframes hideCard {
+    from {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .projectCardTitle {
         font-size: clamp(18px, 2vw, 2vw)
@@ -25,6 +129,15 @@
 
     .projectCardImage {
         height: clamp(175px, 17vw, 17vw);
+    }
+
+    .projectCardBackground {
+        height: clamp(175px, 17vw, 17vw);
+    }
+
+    .projectCardLearnMoreButton {
+        height: clamp(50px, 5vw, 5vw);
+        line-height: clamp(50px, 5vw, 5vw);
     }
 }
 
@@ -35,6 +148,19 @@
     .projectCardImage {
         height: clamp(200px, 17vw, 17vw);
     }
+
+    .projectCardBackground {
+        height: clamp(200px, 17vw, 17vw);
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .projectCardLearnMoreButton {
+        width: 40%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -44,6 +170,9 @@
     .projectCardImage {
         height: clamp(200px, 17vw, 17vw);
     }
+    .projectCardBackground {
+        height: clamp(200px, 17vw, 17vw);
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -51,6 +180,9 @@
         width: 300px;
     }
     .projectCardImage {
+        height: 190px;
+    }
+    .projectCardBackground {
         height: 190px;
     }
 }
@@ -63,6 +195,10 @@
     .projectCardImage {
         height: 180px;
     }
+
+    .projectCardBackground {
+        height: 180px;
+    }
 }
 
 @media only screen and (max-width: 350px) {
@@ -71,6 +207,10 @@
     }
 
     .projectCardImage {
+        height: 165px;
+    }
+
+    .projectCardBackground {
         height: 165px;
     }
 }

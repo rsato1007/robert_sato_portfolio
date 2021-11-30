@@ -7,14 +7,7 @@ import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 
-// Figuring out how we can do dyanmic animations on scroll:
-/* We could create a state for each major component (Introduction, About, Projects, Contact) and each
-   one can house an array that contains each sub component's height value.
-*/
-// Here's the pieces we have so far:
-// window.pageYOffset determines current scroll position.
-// calcHeight gets the distance an element is from the top of the page.
-// document.querySelector("#introduction").offsetHeight (This I believe returns the height of the element).
+// Scroll doesn't work on phones
 
 const App = () => {
   const calcHeight = (elem) => {

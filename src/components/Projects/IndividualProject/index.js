@@ -41,12 +41,14 @@ const IndividualProject = ({ project }) => {
                     <div className="infoCard">
                         <img src={project.image} alt={project.title} className="infoCardImage" />
                         <div className="infoCardTextContainer" onClick={(e) => e.stopPropagation()}>
-                            <h5>{project.title}</h5>
-                            <p>{project.tech}</p>
-                            <hr />
-                            <p>{project.description}</p>
-                            <a href={project.Github} target="_blank" rel="noopener noreferrer"><div>Github</div></a>
-                            <a href={project.demo} target="_blank" rel="noopener noreferrer"><div>Live Demo</div></a>
+                            <h5 className="infoCardTitleText">{project.title}</h5>
+                            <p className="infoCardTechText">{project.tech}</p>
+                            <hr className="infoCardTextDivider" />
+                            <p className="infoCardDescription">{project.description}</p>
+                            <div className="infoCardButtonContainer">
+                                <a href={project.Github} target="_blank" rel="noopener noreferrer" className="infoCardLink githubButton"><div className="infoCardButton">Github</div></a>
+                                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="infoCardLink demoButton"><div className="infoCardButton">Live Demo</div></a>
+                            </div>
                         </div>
                     </div>
                 </div>

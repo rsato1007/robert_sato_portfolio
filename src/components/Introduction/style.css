@@ -22,6 +22,8 @@
 
 .introductionName {
     color: var(--blue-background);
+    animation-name: nameDrop;
+    animation-duration: 2s;
 }
 
 .learnMoreButton {
@@ -45,6 +47,19 @@
 
 a {
     text-decoration: none;
+}
+
+@keyframes nameDrop {
+    from {
+        position: relative;
+        opacity: 0;
+        top: -150px;
+    } 
+    to {
+        position: relative;
+        opacity: 1;
+        top: 0;
+    }
 }
 
 @media only screen and (min-width: 1200px) {

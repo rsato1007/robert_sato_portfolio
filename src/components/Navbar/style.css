@@ -23,22 +23,6 @@
     color: var(--green-background);
 }
 
-.dropNavBarAnimation {
-    animation-name: dropDownNavBar;
-    animation-duration: 0.5s;
-}
-
-@keyframes dropDownNavBar {
-    from {
-        top: -25vh;
-        z-index: 5;
-    }
-    to {
-        top: 0px;
-        z-index: 5;
-    }
-}
-
 @media only screen and (max-width: 1000px) {
     .navbarLinkContainer {
         margin-left: 5vw;

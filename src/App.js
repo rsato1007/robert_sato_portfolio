@@ -76,15 +76,13 @@ const App = () => {
         aboutPosition = {aboutPosition}
         scrollTo = {scrollTo}
       />
-      {aboutPosition <= verticalPosition &&
-        <Navbar
-          browserWidth = {browserWidth}
-          aboutPosition = {aboutPosition}
-          projectPosition = {projectPosition}
-          contactPosition = {contactPosition}
-          scrollTo = {scrollTo}
-        />
-      }
+      <Navbar
+        browserWidth = {browserWidth}
+        aboutPosition = {aboutPosition}
+        projectPosition = {projectPosition}
+        contactPosition = {contactPosition}
+        scrollTo = {scrollTo}
+      />
       <About
         projectPosition = {projectPosition}
         setAboutPosition = {setAboutPosition} 

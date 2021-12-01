@@ -1,9 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./style.css";
 
-const IndividualProject = ({ project }) => {
+const IndividualProject = ({ project, num, projectPosition, verticalPosition, showElement}) => {
     const [showMore, setShowMore] = useState(false);
     const [showInfoCard, setShowInfoCard] = useState(false);
+    const [showOnce, setShowOnce] = useState(false);
+
+    const showMoreInfo = (e) => {
+        e.preventDefault();
+        if (showInfoCard === false) {
+            setShowMore(true);
+        }
+    }
 
     const displayProjectInfo = (e) => {
         e.preventDefault();
@@ -25,8 +33,20 @@ const IndividualProject = ({ project }) => {
         }
     }
 
+    const projectShowAnimation = () => {
+        setTimeout(() => {
+            const projectCardEl = document.getElementById(`project${num}`);
+            projectCardEl.style.animation = `showProjectCard 1s ease`;
+            showElement(projectCardEl);
+        }, num * 330);
+    }
+    if (projectPosition * 0.85 < verticalPosition && !showOnce) {
+        setShowOnce(true);
+        projectShowAnimation();
+    }
+
     return (
-        <div onMouseEnter={(e) => setShowMore(true)} className="projectCardContainer" onMouseLeave={(e) => setShowMore(false)}>
+        <div onMouseEnter={(e) => showMoreInfo(e)} id={`project${num}`} className="projectCardContainer hidden" onMouseLeave={(e) => setShowMore(false)}>
             <h3 className="projectCardTitle">{project.title}</h3>
             {showMore === false &&
                 <img src={project.image} alt="Project" className="projectCardImage"/>

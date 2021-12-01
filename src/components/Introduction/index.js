@@ -7,7 +7,7 @@ const Introduction = ({aboutPosition, scrollTo}) => {
         <div className="introductionContainer" id="introduction">
             <div className="introductionInformation">
                 <div className="introductionText">Hello, I am <span className="introductionName">Robert Sato</span>. <br/> A full-stack developer.</div>
-                <div onClick={(e) => scrollTo(aboutPosition, .935, e)} className="learnMoreButton">Learn More</div>
+                <div onClick={(e) => scrollTo(aboutPosition, 0.935, e)} className="learnMoreButton">Learn More</div>
             </div>
         </div>
     )

@@ -12,18 +12,25 @@ const projectList = [
     {title: "Next Route", tech: "Django, HTML, CSS, Postgresql, Heroku, AWS, JavaScript", description: "A web app for rock climbers to find their next route, to share new routes, and to review current routes.", Github: "https://github.com/rsato1007/next_route", demo: "https://climbernextroute.herokuapp.com/", image: require("../../images/project_image/nextRoute.png")}
 ]
 
-const Projects = ({ contactPosition, setProjectPosition, calcHeight, scrollTo }) => {
+const Projects = ({ contactPosition, projectPosition, setProjectPosition, calcHeight, scrollTo, verticalPosition, showElement }) => {
     useEffect(() => {
         setProjectPosition(calcHeight(document.querySelector(".projectContainer")));
       });
 
     return (
-        <div className="projectContainer">
+        <div className="projectContainer hidden">
             <SectionHeader text="Projects" idText="projects" />
             <div className="projectListContainer">
                 {
                     projectList.map((project, i) =>
-                    <IndividualProject project={project} key={i}/>)
+                    <IndividualProject 
+                        project={project} 
+                        key={i} 
+                        num={i} 
+                        projectPosition={projectPosition} 
+                        verticalPosition={verticalPosition}
+                        showElement={showElement}
+                    />)
                 }
             </div>
             <NextSectionButton text="Contact" position={contactPosition} top={1} scrollTo={scrollTo} />

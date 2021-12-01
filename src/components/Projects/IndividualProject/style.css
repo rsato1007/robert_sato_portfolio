@@ -156,6 +156,19 @@
     animation-delay: 0.20s;
 }
 
+@keyframes showProjectCard {
+    from {
+        position: relative;
+        opacity: 0;
+        top: -100px;
+    } 
+    to {
+        position: relative;
+        opacity: 1;
+        top: 0;
+    }
+}
+
 @keyframes showInfoCard {
     from {
         top: 0;
@@ -231,6 +244,12 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .infoCardButton {
+        height: 40px;
+        line-height: 40px;
+        width: 120px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -264,6 +283,16 @@
     }
     .projectCardBackground {
         height: clamp(200px, 17vw, 17vw);
+    }
+
+    .infoCardButton {
+        height: 35px;
+        line-height: 35px;
+        width: 105px;
+    }
+
+    .infoCardLink {
+        font-size: 16px;
     }
 }
 

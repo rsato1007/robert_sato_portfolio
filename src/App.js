@@ -56,17 +56,19 @@ const App = () => {
     window.onscroll = () => {
       setVerticalPosition(window.pageYOffset);
     }
-    // You'll need to add dyanmic for width as well.
     if (aboutPosition * 0.35 < verticalPosition) {
       showElement(document.querySelector(".aboutFirstHalf"));
     }
     if (aboutPosition * 0.90 < verticalPosition) {
       showElement(document.querySelector(".aboutSecondHalf"));
     }
+    if (projectPosition * 0.70 < verticalPosition) {
+      showElement(document.querySelector(".projectContainer"));
+    }
     if (contactPosition * 0.85 < verticalPosition) {
       showElement(document.querySelector(".contactContainer"));
     }
-  }, [verticalPosition, aboutPosition, contactPosition]);
+  }, [verticalPosition, aboutPosition, projectPosition, contactPosition]);
 
   return (
     <div className="app-container">
@@ -74,13 +76,15 @@ const App = () => {
         aboutPosition = {aboutPosition}
         scrollTo = {scrollTo}
       />
-      <Navbar
-        browserWidth = {browserWidth}
-        aboutPosition = {aboutPosition}
-        projectPosition = {projectPosition}
-        contactPosition = {contactPosition}
-        scrollTo = {scrollTo}
-      />
+      {aboutPosition <= verticalPosition &&
+        <Navbar
+          browserWidth = {browserWidth}
+          aboutPosition = {aboutPosition}
+          projectPosition = {projectPosition}
+          contactPosition = {contactPosition}
+          scrollTo = {scrollTo}
+        />
+      }
       <About
         projectPosition = {projectPosition}
         setAboutPosition = {setAboutPosition} 
@@ -89,8 +93,11 @@ const App = () => {
       />
       <Projects
         contactPosition = {contactPosition}
+        projectPosition = {projectPosition}
+        verticalPosition = {verticalPosition}
         setProjectPosition = {setProjectPosition}
         calcHeight = {calcHeight}
+        showElement = {showElement}
         scrollTo = {scrollTo}
       />
       <Contact

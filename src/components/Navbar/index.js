@@ -17,7 +17,7 @@ const Navbar = ({ browserWidth, aboutPosition, projectPosition, contactPosition,
         }
     }
     return (
-        <div>
+        <div className="mainNavbarContainer">
         {browserWidth >= 450 &&
             <div className="navbarContainerDesktop">
                     <div className="navbarLinkContainer">

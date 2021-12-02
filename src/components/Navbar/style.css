@@ -23,6 +23,55 @@
     color: var(--green-background);
 }
 
+.hamburgerMenu {
+    height: 45px;
+    width: 45px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    float: left;
+    margin-left: 25px;
+}
+
+.dropDownMenuLinks {
+    background: #012850;
+    font-family: var(--font-lato);
+    color: var(--whiteYellow-background);
+    padding-left: 25px;
+    animation-name: showLinkMenu;
+    animation-duration: 1s;
+}
+
+.navbarLinkMobile {
+    font-size: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.hideLinkMenu {
+    animation-name: hideLinkMenu;
+    animation-duration: 0.75s;
+}
+
+@keyframes showLinkMenu {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 152px;
+    }
+}
+
+@keyframes hideLinkMenu {
+    from {
+        height: 152px;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .navbarLinkContainer {
         margin-left: 5vw;

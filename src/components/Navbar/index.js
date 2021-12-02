@@ -8,6 +8,10 @@ const Navbar = ({ browserWidth, aboutPosition, projectPosition, contactPosition,
         e.preventDefault();
         if (showLinkMenu) {
             document.querySelector(".dropDownMenuLinks").classList.add("hideLinkMenu");
+            const navLinksMobileEl = document.querySelectorAll(".navbarLinkMobile");
+            for (let i = 0; i < navLinksMobileEl.length; i++) {
+                navLinksMobileEl[i].style.opacity = "0";
+            }
             setTimeout(() => {
                 setShowLinkMenu(!showLinkMenu);
             }, 750);
@@ -35,7 +39,7 @@ const Navbar = ({ browserWidth, aboutPosition, projectPosition, contactPosition,
                 </div>
                 {showLinkMenu && 
                     <div className="dropDownMenuLinks">
-                        <div onClick={(e) => scrollTo(0, 0, e)}className="navbarLinkMobile">Home</div>
+                        <div onClick={(e) => scrollTo(0, 0, e)} className="navbarLinkMobile">Home</div>
                         <div onClick={(e) => scrollTo(aboutPosition, 0.935, e)} className="navbarLinkMobile">About</div>
                         <div onClick={(e) => scrollTo(projectPosition, 0.974, e)} className="navbarLinkMobile">Projects</div>
                         <div onClick={(e) => scrollTo(contactPosition, 1, e)} className="navbarLinkMobile">Contact</div>

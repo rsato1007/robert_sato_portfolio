@@ -26,7 +26,7 @@
     word-spacing: 7px;
     color: black;
     font-weight: 400;
-    font-size: clamp(16px, 2vw, 22px);
+    font-size: clamp(18px, 2.5vw, 24px);
 }
 
 @media only screen and (max-width: 1500px) {

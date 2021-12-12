@@ -21,7 +21,7 @@
 .projectCardBackground {
     width: 100%;
     height: 250px;
-    background: var(--green-background);
+    background: var(--lighter-green-background);
 }
 
 .projectCardLearnMoreButton {
@@ -41,7 +41,7 @@
 }
 
 .projectCardLearnMoreButton:hover {
-    background: var(--darker-green-background);
+    background: var(--green-background);
 }
 
 .infoCardContainer {

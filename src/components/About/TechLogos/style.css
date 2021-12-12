@@ -6,63 +6,63 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 30px 60px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .html-image {
-    height: clamp(75px, 10vw, 140px);
-    width: clamp(75px, 10vw, 140px);
+    height: clamp(60px, 8vw, 112px);
+    width: clamp(60px, 8vw, 112px);
 }
 
 .css-image {
-    height: clamp(75px, 10vw, 135px);
-    width: clamp(55px, 7vw, 98px);
+    height: clamp(60px, 8vw, 108px);
+    width: clamp(44px, 5.5vw, 79px);
 }
 
 .js-image {
-    height: clamp(75px, 10vw, 135px);
-    width: clamp(55px, 7vw, 98px);
+    height: clamp(60px, 8vw, 108px);
+    width: clamp(44px, 5.5vw, 79px);
 }
 
 .python-image {
-    height: clamp(70px, 10vw, 130px);
-    width: clamp(50px, 7vw, 110px);
+    height: clamp(56px, 8vw, 104px);
+    width: clamp(40px, 5.5vw, 88px);
 }
 
 .react-image {
-    height: clamp(75px, 10vw, 140px);
-    width: clamp(75px, 10vw, 140px);
+    height: clamp(60px, 8vw, 112px);
+    width: clamp(60px, 8vw, 112px);
 }
 
 .django-image {
-    height: clamp(65px, 9vw, 125px);
-    width: clamp(100px, 13vw, 225px);
+    height: clamp(52px, 7vw, 100px);
+    width: clamp(80px, 10.5vw, 180px);
 }
 
 .express-image {
-    height: clamp(65px, 9vw, 125px);
-    width: clamp(100px, 13vw, 225px);
+    height: clamp(52px, 7vw, 100px);
+    width: clamp(80px, 10.5vw, 180px);
 }
 
 .mongoDB-image {
-    height: clamp(75px, 10vw, 140px);
-    width: clamp(115px, 15vw, 250px);
+    height: clamp(60px, 8vw, 112px);
+    width: clamp(92px, 12vw, 200px);
 }
 
 .postgresql-image {
-    height: clamp(70px, 10vw, 130px);
-    width: clamp(55px, 8vw, 120px);
+    height: clamp(56px, 8vw, 104px);
+    width: clamp(44px, 6.5vw, 96px);
 }
 
 .aws-image {
-    height: clamp(55px, 8vw, 105px);
-    width: clamp(90px, 12vw, 195px);
+    height: clamp(44px, 6.5vw, 84px);
+    width: clamp(72px, 9.5vw, 156px);
 }
 
 .heroku-image {
-    height: clamp(55px, 8vw, 100px);
-    width: clamp(40px, 5.5vw, 75px);
+    height: clamp(44px, 6.5vw, 80px);
+    width: clamp(32px, 4.5vw, 60px);
 }
 
 @media only screen and (max-width: 750px) {
@@ -125,5 +125,12 @@
     .heroku-image {
         height: 57px;
         width: 43px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .logoContainer {
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }

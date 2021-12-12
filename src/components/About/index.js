@@ -11,17 +11,17 @@ const About = ({ projectPosition, setAboutPosition, calcHeight, scrollTo }) => {
       
     return (
         <div className="aboutContainer shown">
+            <SectionHeader text="About" idText="about"/>
             <div className="aboutFirstHalf hidden">
-                <SectionHeader text="About" idText="about"/>
-                <TechLogos />
-            </div>
-            <div className="aboutSecondHalf hidden">
                 <div className="aboutMeInfoContainer">
                     <img className="robPic" src={require("../../images/rob-pic.jpg")} alt="Robert" />
                     <p className="aboutMeText">
-                        Born and raised in Colorado, I started my journey in finance, but after a few years, I was left unsatisfied. I enjoyed it, but I wanted something that would push me and allow to create things I can tangibly see. This is where coding comes in. I joined General Assembly’s software engineer program in May 2021 to start a new path and graudated in November 2021. A path where I can make things that empower others to achieve their purpose. Now I want bring my skills to company that empowers it’s users.
+                        Hi I am Robert Sato, a full-stack developer based out of Englewood, Colorado. For the last two years, I've been working in finance as personal banker/loan officer where I discovered I love creating things and helping others become empowered. In November 2021, I graduated from General Assembly's 420-hour software program so that I can bring these passions plus my knowledge of web design to create websites that are not only include intutive UI, but also provide services that empower clients.
                     </p>
                 </div>
+            </div>
+            <div className="aboutSecondHalf hidden">
+                <TechLogos />
                 <NextSectionButton
                     text="Projects"
                     position={projectPosition}
